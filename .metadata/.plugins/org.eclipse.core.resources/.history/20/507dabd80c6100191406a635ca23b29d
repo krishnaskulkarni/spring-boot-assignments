@@ -1,0 +1,33 @@
+package com.capgemini.demoinheritancemapping.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.demoinheritancemapping.entity.Employee;
+import com.capgemini.demoinheritancemapping.entity.Student;
+import com.capgemini.demoinheritancemapping.service.PersonService;
+
+@RestController
+public class DemoController {
+
+	@Autowired
+	PersonService service;
+
+	@RequestMapping("/new")
+	public String hello() {
+		
+		Employee e1 = new Employee(1,"kapil",101,"capgemini");
+		//Employee e2 = new Employee(102,"capgemini");
+		
+		Student s1 = new Student(2,"abbas",201,"DYPIEMR");
+		//Student s2 = new Student(202,"PCCOE");
+		
+		
+		service.addNew(e1);
+		service.addNew(s1);
+		
+		
+		return "successfully added..";
+	}
+}

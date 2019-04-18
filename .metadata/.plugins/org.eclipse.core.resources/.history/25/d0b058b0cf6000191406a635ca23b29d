@@ -1,0 +1,11 @@
+package com.capgemini.demohibernateonetomany.service;
+
+import com.capgemini.demohibernateonetomany.entity.Person;
+
+public interface PersonService {
+		public void addNew(Person person);
+
+		public Person findById(int i);
+
+		public void delete(int i);
+}

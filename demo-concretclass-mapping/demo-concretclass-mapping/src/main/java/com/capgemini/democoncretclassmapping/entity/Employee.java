@@ -1,0 +1,43 @@
+package com.capgemini.democoncretclassmapping.entity;
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity  
+@Table(name="employee")  
+@AttributeOverrides({  
+    @AttributeOverride(name="id", column=@Column(name="id")),  
+    @AttributeOverride(name="name", column=@Column(name="name"))  
+})  
+public class Employee extends Person {
+
+	
+	private String company;
+
+
+	public Employee() {
+		super();
+
+	}
+	
+	public Employee(int personId, String personName, String company) {
+		super(personId, personName);
+		this.company = company;
+	}
+
+
+	public Employee(int personId, String personName) {
+		super(personId, personName);
+
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [ company=" + company + "]";
+	}
+
+	
+}

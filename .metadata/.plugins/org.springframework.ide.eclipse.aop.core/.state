@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="myApp"/>
+<aop-project name="demo"/>
+<aop-project name="bankapp-spring-boot"/>
+<aop-project name="demo-hibernate-onetoone"/>
+<aop-project name="demo-hibernate-onetomany"/>
+</aop-reference-model>

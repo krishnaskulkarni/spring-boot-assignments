@@ -1,0 +1,49 @@
+package com.capgemini.demohibernateonetomany.controller;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.demohibernateonetomany.entity.Certificate;
+import com.capgemini.demohibernateonetomany.entity.Person;
+import com.capgemini.demohibernateonetomany.entity.Profile;
+import com.capgemini.demohibernateonetomany.service.PersonService;
+
+@RestController
+public class DemoController {
+
+	@Autowired
+	PersonService service;
+
+	@RequestMapping("/hello")
+	public String hello() {
+		return "hello world..";
+	}
+
+	@RequestMapping("/addperson")
+	public Person getPerson() {
+		
+		
+		Set<Certificate> certificates = new HashSet<Certificate>();
+		certificates.add(new Certificate(201,"java"));
+		certificates.add(new Certificate(202,".net"));
+		
+		Person person = new Person(108, "tony",certificates);
+		
+		service.addNew(person);
+		return person;
+	}
+
+	@RequestMapping("/profile")
+	public Person getProfile() {
+		
+		Person person = new Person(108, "tony", new Profile());
+		
+		service.addNew(person);
+		return person;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package com.capgemini.demohibernatemanytomany.controller;
+
+public class Project{
+	
+	private int projectId;
+	private String name;
+	
+	
+	
+}

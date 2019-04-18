@@ -1,0 +1,86 @@
+package com.capgemini.demohibernateonetomany.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import org.hibernate.mapping.Set;
+
+@Entity
+@Table(name = "person")
+public class Person {
+
+	@Id
+	private int personId;
+	private String personName;
+	
+	
+	@OneToOne(mappedBy = "person", cascade = CascadeType.ALL, orphanRemoval = true)
+	private Profile profile;
+	
+	@OneToMany(mappedBy = "person", cascade = CascadeType.ALL, orphanRemoval = true)
+	Set<Certificate> certificate;
+
+	public Person(int personId, String personName) {
+		super();
+		this.personId = personId;
+		this.personName = personName;
+	}
+	
+	
+
+	public Person(int personId, String personName, Profile profile) {
+		super();
+		this.personId = personId;
+		this.personName = personName;
+		this.profile = profile;
+	}
+
+
+
+	public Person() {
+		super();
+
+	}
+
+	public int getPersonId() {
+		return personId;
+	}
+
+	
+	public void setPersonId(int personId) {
+		this.personId = personId;
+	}
+
+	public String getPersonName() {
+		return personName;
+	}
+
+	public Person(int personId, String personName, Set<Certificate> certificate) {
+		super();
+		this.personId = personId;
+		this.personName = personName;
+		this.certificate = certificate;
+	}
+
+	public void setPersonName(String personName) {
+		this.personName = personName;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [personId=" + personId + ", personName=" + personName + ", certificate=" + certificate + "]";
+	}
+
+	public Set<Certificate> getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(Set<Certificate> certificate) {
+		this.certificate = certificate;
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.capgemini.demohibernatemanytomany.entity;
+
+public class Project {
+	private int personId;
+	private String personName;
+}

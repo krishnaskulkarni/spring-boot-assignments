@@ -1,0 +1,28 @@
+package com.capgemini.demoinheritancemapping.entity;
+
+
+@Entity
+public class Employee extends Person {
+
+	private int employeeId;
+	private String company;
+
+
+	public Employee() {
+		super();
+
+	}
+	
+	public Employee(int personId, String personName, int employeeId, String company) {
+		super(personId, personName);
+		this.employeeId = employeeId;
+		this.company = company;
+	}
+
+
+	public Employee(int personId, String personName) {
+		super(personId, personName);
+
+	}
+
+}

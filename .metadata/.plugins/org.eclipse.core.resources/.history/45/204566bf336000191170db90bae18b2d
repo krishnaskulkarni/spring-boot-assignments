@@ -1,0 +1,28 @@
+package com.capgemini.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.demo.entity.Person;
+import com.capgemini.demo.service.PersonService;
+
+@RestController
+public class DemoController {
+
+	@Autowired
+	PersonService service;
+
+	@RequestMapping("/hello")
+	public String hello() {
+		return "hello world..";
+	}
+
+	@RequestMapping("/addperson")
+	public Person getPerson() {
+		Person person = new Person(108, "tony");
+		service.addNew(person);
+		return person;
+	}
+
+}

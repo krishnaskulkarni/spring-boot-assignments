@@ -1,0 +1,21 @@
+package com.capgemini.demohibernatemanytomany.entity;
+
+import java.util.Set;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+public class Project {
+	private int projectId;
+	private String projectName;
+	
+    @ManyToMany
+	@JoinTable(name = "person_project",
+	joinColumns = @JoinColumn(name = "projectId"),
+	inverseJoinColumns = @JoinColumn(name = "personId"))
+	private Set<Person> persons;
+	
+	
+	
+}

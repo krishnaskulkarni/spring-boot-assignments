@@ -1,0 +1,38 @@
+package com.capgemini.demoinheritancemapping.entity;
+
+import javax.persistence.Id;
+
+@MappedSuperClass
+public class Person {
+	
+	@Id
+	private int personId;
+	private String personName;
+
+	public Person(int personId, String personName) {
+		super();
+		this.personId = personId;
+		this.personName = personName;
+	}
+
+	public Person() {
+		super();
+	}
+
+	public int getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(int personId) {
+		this.personId = personId;
+	}
+
+	public String getPersonName() {
+		return personName;
+	}
+
+	public void setPersonName(String personName) {
+		this.personName = personName;
+	}
+
+}

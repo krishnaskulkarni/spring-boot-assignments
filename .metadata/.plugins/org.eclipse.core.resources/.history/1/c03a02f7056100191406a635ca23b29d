@@ -1,0 +1,5 @@
+package com.capgemini.demoinheritancemapping.entity;
+
+public class Employee {
+
+}

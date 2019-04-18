@@ -1,0 +1,8 @@
+package com.capgemini.demohibernatemanytomany.service;
+
+import com.capgemini.demohibernatemanytomany.entity.Person;
+
+public interface ProjectService {
+
+	public void addNew(Project project);
+}

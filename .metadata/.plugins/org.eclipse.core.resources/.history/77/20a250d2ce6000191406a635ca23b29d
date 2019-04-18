@@ -1,0 +1,11 @@
+package com.capgemini.demohibernatemanytomany.entity;
+
+import java.util.Set;
+
+public class Project {
+	private int projectId;
+	private String projectName;
+	
+	private Set<Person> persons;
+	
+}

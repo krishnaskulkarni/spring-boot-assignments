@@ -1,0 +1,8 @@
+package com.capgemini.demo.entity;
+
+public class Certificate {
+	
+	private int certId;
+	private String certName;
+	
+}

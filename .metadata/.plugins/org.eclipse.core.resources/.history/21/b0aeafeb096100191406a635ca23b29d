@@ -1,0 +1,6 @@
+package com.capgemini.demoinheritancemapping.entity;
+
+public class Student {
+	private int studentId;
+	private String collage;
+}

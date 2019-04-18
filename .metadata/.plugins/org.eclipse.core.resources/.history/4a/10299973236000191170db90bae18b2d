@@ -1,0 +1,5 @@
+package com.capgemini.demo.dao;
+
+public interface PersonDao extends JpaRepository{
+
+}

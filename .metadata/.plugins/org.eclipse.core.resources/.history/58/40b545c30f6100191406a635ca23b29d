@@ -1,0 +1,55 @@
+package com.capgemini.demoinheritancemapping.entity;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value="student")  
+public class Student extends Person {
+
+	private int studentId;
+	private String collage;
+
+	public Student(int studentId, String collage) {
+		super();
+		this.studentId = studentId;
+		this.collage = collage;
+	}
+
+	
+	
+	public Student(int personId, String personName, int studentId, String collage) {
+		super(personId, personName);
+		this.studentId = studentId;
+		this.collage = collage;
+	}
+
+
+
+	public Student() {
+		super();
+	}
+
+	public int getStudentId() {
+		return studentId;
+	}
+
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+
+	public String getCollage() {
+		return collage;
+	}
+
+	public void setCollage(String collage) {
+		this.collage = collage;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", collage=" + collage + "]";
+	}
+	
+
+}

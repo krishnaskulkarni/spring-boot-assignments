@@ -1,0 +1,20 @@
+package com.capgemini.demoinheritancemapping.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.demohibernateonetoone.service.PersonService;
+import com.capgemini.demoinheritancemapping.entity.Person;
+
+@RestController
+public class DemoController {
+
+	@Autowired
+	PersonService service;
+
+	@RequestMapping("/hello")
+	public String hello() {
+		return "hello world..";
+	}
+}

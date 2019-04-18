@@ -1,0 +1,5 @@
+package com.capgemini.demo.service;
+
+public interface PersonService {
+		public void addNew(Person person);
+}

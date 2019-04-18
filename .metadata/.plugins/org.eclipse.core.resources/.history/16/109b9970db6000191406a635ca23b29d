@@ -1,0 +1,5 @@
+package com.capgemini.demohibernatemanytomany.service.impl;
+
+public class ProjectServiceImpl {
+
+}

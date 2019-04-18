@@ -1,0 +1,23 @@
+package com.capgemini.demo.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.demo.entity.Person;
+
+@RestController
+public class DemoController {
+	
+	
+	
+	@RequestMapping("/hello")
+	public String hello() {
+		return "hello world..";
+	}
+	
+	@RequestMapping("/add")
+	public String getPerson() {
+		Person person = new Person(101,"tony");
+		return "hello world..";
+	}
+}

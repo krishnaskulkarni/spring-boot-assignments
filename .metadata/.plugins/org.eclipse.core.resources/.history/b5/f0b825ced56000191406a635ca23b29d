@@ -1,0 +1,50 @@
+package com.capgemini.demohibernatemanytomany.entity;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+import com.capgemini.demohibernatemanytomany.controller.Project;
+
+@Entity
+@Table(name = "per")
+public class Person {
+
+	@Id
+	private int personId;
+	private String personName;
+
+	@ManyToMany
+	@JoinTable(name = "person_project",
+	joinColumns = @JoinColumn(name = "SINGER_ID"),
+	inverseJoinColumns = @JoinColumn(name = "INSTRUMENT_ID"))
+	private Set<Project> project;
+	
+	public Person() {
+		super();
+	}
+	
+	public int getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(int personId) {
+		this.personId = personId;
+	}
+
+	public String getPersonName() {
+		return personName;
+	}
+
+	public void setPersonName(String personName) {
+		this.personName = personName;
+	}
+
+
+
+}

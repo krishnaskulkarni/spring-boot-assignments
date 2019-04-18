@@ -1,0 +1,21 @@
+package com.capgemini.demohibernateonetomany.entity;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "")
+public class Project {
+	
+	private int projectId;
+	private String name;
+	
+	private Set<Person> person;
+
+	
+	
+	
+}

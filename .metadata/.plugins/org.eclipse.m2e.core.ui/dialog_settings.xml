@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\krishna\spring-boot\demo-hibernate-onetoone"/>
+			<item value="C:\krishna\spring-boot\demo-hibernate-onetomany"/>
+			<item value="C:\krishna\spring-boot\demo"/>
+			<item value="C:\krishna\spring-boot\myApp"/>
+			<item value="C:\krishna\spring-boot\myApp\myApp"/>
+			<item value="C:\krishna\springboot\myApp\myApp"/>
+			<item value="C:\krishna\spring-boot\bankapp-spring-boot"/>
+			<item value="C:\krishna\springboot"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

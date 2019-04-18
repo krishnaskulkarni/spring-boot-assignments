@@ -1,0 +1,70 @@
+package com.capgemini.demohibernatemanytomany.controller;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.demohibernatemanytomany.entity.Person;
+import com.capgemini.demohibernatemanytomany.entity.Project;
+import com.capgemini.demohibernatemanytomany.service.PersonService;
+import com.capgemini.demohibernatemanytomany.service.ProjectService;
+
+@RestController
+public class DemoController {
+
+	@Autowired
+	PersonService service;
+
+	/*
+	 * @Autowired ProjectService projectService;
+	 */
+
+	@RequestMapping("/hello")
+	public String hello() {
+		return "hello world..";
+	}
+
+	@RequestMapping("/addperson")
+	public String addPerson() {
+
+		Set<Project> projects = new HashSet<Project>();
+
+		Project project = new Project(601, "java");
+		//Project project1 = new Project(602, "python");
+
+		projects.add(project);
+		//projects.add(project1);
+
+		Person person = new Person(102, "KK", projects);
+
+		service.addNew(person);
+
+		return "successfully added";
+	}
+
+	@RequestMapping("/addproject")
+	public Project addProject() {
+
+		Set<Person> persons = new HashSet<Person>();
+
+		Person Person = new Person(101, "abc");
+		Person Person1 = new Person(102, "xyz");
+
+		persons.add(Person);
+		persons.add(Person1);
+
+		Project project = new Project(501, "java", persons);
+
+		// projectService.addNew(project);
+
+		return project;
+	}
+
+	/*
+	 * @RequestMapping("/find") public Person display() { return
+	 * service.findById(101); }
+	 */
+}

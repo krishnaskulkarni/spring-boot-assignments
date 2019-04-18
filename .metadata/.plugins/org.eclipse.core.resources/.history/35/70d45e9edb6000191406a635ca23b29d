@@ -1,0 +1,5 @@
+package com.capgemini.demohibernatemanytomany.service;
+
+public interface ProjectService {
+
+}

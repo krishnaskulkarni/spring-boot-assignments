@@ -1,0 +1,5 @@
+package com.capgemini.demohibernatemanytomany.controller;
+
+public class Project{
+	
+}

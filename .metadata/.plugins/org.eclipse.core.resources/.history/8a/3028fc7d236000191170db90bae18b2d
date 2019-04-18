@@ -1,0 +1,15 @@
+package com.capgemini.demo.service.impl;
+
+import com.capgemini.demo.entity.Person;
+import com.capgemini.demo.service.PersonService;
+
+public class PersonServiceImpl implements PersonService {
+
+	PersonDao dao;
+	
+	@Override
+	public void addNew(Person person) {
+
+	}
+
+}

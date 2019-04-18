@@ -1,0 +1,15 @@
+package com.capgemini.demohibernateonetomany.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+@Entity
+public class Profile {
+	
+	@Id
+	private int profileId;
+	private String name;
+	
+	private Person person;
+}

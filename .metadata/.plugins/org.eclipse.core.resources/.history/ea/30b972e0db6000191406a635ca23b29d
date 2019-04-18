@@ -1,0 +1,15 @@
+package com.capgemini.demohibernatemanytomany.service.impl;
+
+import com.capgemini.demohibernatemanytomany.entity.Project;
+import com.capgemini.demohibernatemanytomany.service.ProjectService;
+
+public class ProjectServiceImpl implements ProjectService{
+
+	@Override
+	public void addNew(Project project) {
+		
+		
+		
+	}
+	
+}

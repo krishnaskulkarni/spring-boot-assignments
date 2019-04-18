@@ -1,0 +1,38 @@
+package com.capgemini.demohibernatemanytomany.service.impl;
+
+import java.util.List;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.demohibernatemanytomany.dao.PersonDao;
+import com.capgemini.demohibernatemanytomany.entity.Person;
+import com.capgemini.demohibernatemanytomany.service.PersonService;
+
+
+@Service
+public class PersonServiceImpl implements PersonService {
+
+	@Autowired
+	PersonDao dao;
+	
+	
+	@Override
+	public Person findById(int id) {
+		return dao.findById(id).get();
+	}
+
+	@Override
+	public void addNew(Set<Person> persons) {
+		dao.saveAll(persons);
+	}
+
+	@Override
+	public List<Person> findAll() {
+		return dao.findAll();
+	}
+
+	
+
+}

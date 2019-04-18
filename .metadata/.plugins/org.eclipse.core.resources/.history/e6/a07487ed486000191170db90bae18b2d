@@ -1,0 +1,68 @@
+package com.capgemini.demohibernateonetomany.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "certificate")
+public class Certificate implements Comparable<T>{
+
+	@Id
+	private int certId;
+	private String certName;
+
+	@ManyToOne
+	@JoinColumn(name = "personId")
+	private Person person;
+
+	public Certificate(int certId, String certName, Person person) {
+		super();
+		this.certId = certId;
+		this.certName = certName;
+		this.person = person;
+	}
+
+	public Certificate(int certId, String certName) {
+		super();
+		this.certId = certId;
+		this.certName = certName;
+	}
+
+	public Certificate() {
+		super();
+	}
+
+	public int getCertId() {
+		return certId;
+	}
+
+	public void setCertId(int certId) {
+		this.certId = certId;
+	}
+
+	public String getCertName() {
+		return certName;
+	}
+
+	public void setCertName(String certName) {
+		this.certName = certName;
+	}
+
+	
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+	@Override
+	public String toString() {
+		return "Certificate [certId=" + certId + ", certName=" + certName + ", person=" + person + "]";
+	}
+
+}

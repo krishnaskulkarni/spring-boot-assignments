@@ -1,0 +1,7 @@
+package com.capgemini.demo.config;
+
+
+@Configuration
+public class DemoConfig {
+
+}

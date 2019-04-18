@@ -1,0 +1,18 @@
+package com.capgemini.demohibernatemanytomany.service.impl;
+
+import com.capgemini.demohibernatemanytomany.dao.ProjectDao;
+import com.capgemini.demohibernatemanytomany.entity.Project;
+import com.capgemini.demohibernatemanytomany.service.ProjectService;
+
+public class ProjectServiceImpl implements ProjectService{
+
+	ProjectDao dao;
+	
+	@Override
+	public void addNew(Project project) {
+		
+		dao.save(project);
+		
+	}
+	
+}

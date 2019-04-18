@@ -1,0 +1,9 @@
+package com.capgemini.demohibernateonetomany.entity;
+
+public class Profile {
+	
+	@Id
+	private int profileId;
+	private String name;
+	
+}

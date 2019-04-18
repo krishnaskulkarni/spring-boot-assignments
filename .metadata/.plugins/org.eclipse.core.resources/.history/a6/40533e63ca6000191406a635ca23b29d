@@ -1,0 +1,15 @@
+package com.capgemini.demohibernateonetomany.entity;
+
+import java.util.Set;
+
+public class Project {
+	
+	private int projectId;
+	private String name;
+	
+	private Set<Person> person;
+
+	
+	
+	
+}
